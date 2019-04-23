@@ -189,7 +189,7 @@ open class ReactivePlayBilling constructor(context: Context) : PurchasesUpdatedL
             Single<SubscriptionResponse> {
         return Single.create {
             val flowParams = BillingFlowParams.newBuilder()
-                    .setOldSku(oldSkuId)
+                    .setOldSkus(arrayListOf(oldSkuId))
                     .setSku(newSkuId)
                     .setType(BillingClient.SkuType.SUBS)
                     .build()
