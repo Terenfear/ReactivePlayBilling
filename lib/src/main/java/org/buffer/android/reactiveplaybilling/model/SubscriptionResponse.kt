@@ -4,11 +4,10 @@ import com.android.billingclient.api.BillingClient
 
 sealed class SubscriptionResponse(@BillingClient.BillingResponse val responseCode: Int) {
 
-    data class SubscriptionSuccess(@BillingClient.BillingResponse private val billingResponse: Int)
+    class Success(@BillingClient.BillingResponse billingResponse: Int)
         : SubscriptionResponse(billingResponse)
 
-    data class SubscriptionFailure(@BillingClient.BillingResponse
-                                   private val billingResponse: Int)
+    class Failure(@BillingClient.BillingResponse billingResponse: Int)
         : SubscriptionResponse(billingResponse)
 
 }

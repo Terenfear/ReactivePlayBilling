@@ -6,16 +6,16 @@ buildscript {
         verMinSdk = 21
         verTargetSdk = 28
 
-        verKotlin = '1.3.30'
+        verKotlin = '1.3.40'
         verRxJava = '2.2.8'
-        verBilling = '1.0'
+        verBilling = '1.2.2'
     }
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:3.4.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$verKotlin"
 
         // NOTE: Do not place your application dependencies here; they belong
